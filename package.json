@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/seekjs-framework/seek-plugin-mask.git"
+    "url": "git@github.com/seekjs-framework/seekjs-plugin-mask.git"
   },
   "keywords": [
     "seekjs", "plugin", "mask"

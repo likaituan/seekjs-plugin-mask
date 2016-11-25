@@ -75,7 +75,7 @@
         if(typeof ops=="string"){
             model.text = ops;
         }
-        filter.mergeObj(mod, ops);
+        filter.mergeObj(model, ops);
         model.pic = ops.loading ? exports.pic.loading : "";
         //this.text && obj.css("line-height", this.args.box.height()+"px");
 
