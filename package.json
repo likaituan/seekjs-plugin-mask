@@ -1,6 +1,6 @@
 {
   "name": "seekjs-plugin-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is a mask plugin by seekjs",
   "main": "index.sk",
   "scripts": {
@@ -11,7 +11,9 @@
     "url": "git@github.com/seekjs-framework/seekjs-plugin-mask.git"
   },
   "keywords": [
-    "seekjs", "plugin", "mask"
+    "seekjs",
+    "plugin",
+    "mask"
   ],
   "author": "Li",
   "license": "MIT"
