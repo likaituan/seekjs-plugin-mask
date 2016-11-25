@@ -79,8 +79,8 @@
         model.pic = ops.loading ? exports.pic.loading : "";
         //this.text && obj.css("line-height", this.args.box.height()+"px");
 
-        exports.show();
         exports.render();
+        exports.show();
         model.time && setTimeout(exports.hide, model.time);
     };
 </script>
