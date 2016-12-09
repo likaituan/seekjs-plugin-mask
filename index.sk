@@ -67,7 +67,7 @@
     };
 
     exports.pic = {
-        loading: "./loading.gif"
+        loading: "/node_modules/seekjs-plugin-mask/loading.gif"
     };
 
     //显示遮罩
