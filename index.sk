@@ -24,7 +24,7 @@
             model.text = ops;
         }
         Object.assign(model, ops);
-        model.pic = ops.loading ? this.pic.loading : "";
+        model.pic = ops.loading ? ( ops.pic || this.pic.loading) : "";
         //this.text && obj.css("line-height", this.args.box.height()+"px");
 
         this.render();
