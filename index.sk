@@ -1,44 +1,7 @@
-<script type="text/ecmascript-6">
-    /**
-     * 遮罩层插件
-     */
+/**
+* 遮罩层插件
+*/
 
-    //默认设置
-    var model = exports.model = {
-        bg: "#000",				//背景色
-        pic: "",				//图片
-        color: "",				//文字颜色
-        text: "",				//文字
-        loading: false,			//是否loading
-        opacity: 0.5,			//透明度
-        time: 0				    //是否定时关闭
-    };
-
-    exports.pic = {
-        loading: module.resolve("./loading.gif")
-    };
-
-    //显示遮罩
-    exports.showMask = function (ops) {
-        if(typeof ops=="string"){
-            model.text = ops;
-        }
-        Object.assign(model, ops);
-        model.pic = ops.loading ? ( ops.pic || this.pic.loading) : "";
-        //this.text && obj.css("line-height", this.args.box.height()+"px");
-
-        this.render();
-        this.show();
-        model.time && setTimeout(this.hide, model.time);
-    };
-</script>
-
-<template>
-    <div class="sk-mask" data-level="{this.level}">
-        <div class="sk-mask-bg"></div>
-        <div class="sk-mask-text">{this.text}</div>
-    </div>
-</template>
 
 <style>
     .sk-mask{
@@ -47,10 +10,10 @@
         -webkit-box-align: center;
         z-index: 999999999;
         position: fixed;
-        left: 0;
-        top: 0;
         width: 100%;
         height: 100%;
+        left: 0px;
+        top: 0px;
     }
 
     .sk-mask>div{
@@ -62,23 +25,12 @@
     }
 
     .sk-mask-bg{
-        opacity: [this.opacity];
-        background-color: [this.bg];
+
     }
 
     .sk-mask-text{
-        [if this.color]
-            color: [this.color];
-        [/if]
-        [if this.pic]
-            background-image: url([this.pic]);
-            background-repeat: no-repeat;
-            background-position: center center;
-        [/if]
+
     }
-<<<<<<< HEAD
-</style>
-=======
 </style>
 
 <template>
@@ -124,7 +76,7 @@
             model.text = ops;
         }
         filter.mergeObj(model, ops);
-        model.pic = ops.loading ? exports.pic.loading : "";
+        model.pic = ops.loading ? (ops.pic || exports.pic.loading) :  "";
         //this.text && obj.css("line-height", this.args.box.height()+"px");
 
         exports.render();
@@ -132,4 +84,3 @@
         model.time && setTimeout(exports.hide, model.time);
     };
 </script>
->>>>>>> d6d414feee9034f87ea0bfba720825c369954e4a
