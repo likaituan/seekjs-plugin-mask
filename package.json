@@ -1,5 +1,5 @@
 {
-  "name": "seekjs-plugin-mask",
+  "name": "sk2-plugin-mask",
   "version": "1.0.5",
   "description": "this is a mask plugin by seekjs",
   "main": "index.sk",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/seekjs-framework/seekjs-plugin-mask.git"
+    "url": "git@github.com/seekjs/sk2-plugin-mask.git"
   },
   "keywords": [
     "seekjs",
