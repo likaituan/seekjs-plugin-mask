@@ -43,6 +43,7 @@
 	    {if this.color}
 		color: {this.color};
 		{/if}
+		{=this}
 		{if this.pic}
 		background-image: url({this.pic});
 		background-repeat: no-repeat;
@@ -55,19 +56,20 @@
 <script>
     var filter = require("sys.pipe");
 
+    exports.pic = {
+        loading: seekjs.getPath("./node_modules/sk2-plugin-mask/loading.gif")
+        //loading: seekjs.getPath("./node_modules/sk2-plugin-mask/loading2.png")
+    };
+
     //默认设置
     var model = exports.model = {
         bg: "#000",				//背景色
-        pic: "",				//图片
+        pic: exports.pic.loading,				//图片
         color: "",				//文字颜色
         text: "",				//文字
         loading: false,			//是否loading
         opacity: 0.5,			//透明度
         time: 0				    //是否定时关闭
-    };
-
-    exports.pic = {
-        loading: "/node_modules/seekjs-plugin-mask/loading.gif"
     };
 
     //显示遮罩
